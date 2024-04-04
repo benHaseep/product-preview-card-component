@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 600px;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row;
+  border-radius: 10px;
+  color: hsl(228, 12%, 48%);
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .card {
+    flex-flow: column;
+    width: 350px;
+  }
+}
+
+.card .img {
+  background-image: url(/images/image-product-desktop.jpg);
+  width: 50%;
+  background-size: cover;
+  border-radius: 5px 0 0 5px;
+}
+
+@media (max-width: 767px) {
+  .card .img {
+    height: 250px;
+    width: 100%;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+.card .details {
+  width: 50%;
+}
+@media (min-width: 767px) {
+  .card .details {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card .details {
+    width: 100%;
+  }
+}
+.card .details .label {
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+.card .details .title {
+  margin-top: 10px;
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 35px;
+}
+.card .details .about {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.card .details .price {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card .details .price span:first-of-type {
+  color: hsl(158, 36%, 37%);
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+}
+.card .details .price .discount {
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+.card .details button {
+  margin: 10px auto;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 45px;
+  border: 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.card .details button:hover {
+  cursor: pointer;
+  background-color: hsl(159, 37%, 22%);
+}
+
+@media (max-width: 767px) {
+  .card .details > * {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .card .details button {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  color: hsl(158, 36%, 37%);
+}
